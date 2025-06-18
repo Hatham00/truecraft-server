@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrueCraft Nashville</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #000;
+      color: white;
+      height: 100%;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      z-index: 1000;
+    }
+    nav img { height: 50px; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      padding: 60px 20px;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    section.active {
+      display: block;
+    }
+    h1, h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    }
+    p {
+      font-size: 18px;
+      color: #f0f0f0;
+      line-height: 1.6;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+    h3 {
+      margin-top: 40px;
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 20px auto 0;
+    }
+    input, textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .button, button[type="submit"] {
+      padding: 12px 40px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+    .button-spaced {
+      margin-top: 30px;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      font-size: 14px;
+      color: #aaa;
+    }
+    .instagram-embed-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .instagram-embed-wrapper blockquote {
+      max-width: 320px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showSection('home')">
+      <img src="https://img1.wsimg.com/isteam/ip/62980aca-7f4b-4d49-b60c-599f348429dd/PNG.png" alt="TrueCraft Nashville Logo" />
+    </a>
+    <ul>
+      <li><a onclick="showSection('home')">Home</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('services')">Services</a></li>
+      <li><a onclick="showSection('design')">Design</a></li>
+      <li><a onclick="showSection('instagram')">Instagram</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="active" style="background-image: url('https://images.unsplash.com/photo-1588854337236-f9680f27c667?auto=format&fit=crop&w=1920&q=80');">
+    <h1>Welcome to TrueCraft Nashville</h1>
+    <p>Transform your space with Nashville's most trusted remodeling experts.</p>
+    <div style="margin-top: 40px; display: flex; justify-content: center;">
+      <iframe title="Modern Kitchen Counter" frameborder="0" width="640" height="480"
+        src="https://sketchfab.com/models/d245b006ce1d4e2191daf2df0d6c0e30/embed"
+        allow="autoplay; fullscreen; vr"
+        mozallowfullscreen="true" webkitallowfullscreen="true">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="about" style="background-image: url('https://images.unsplash.com/photo-1600585153899-1ff7c53c3f3e?auto=format&fit=crop&w=1920&q=80');">
+    <h2>About Us</h2>
+    <p>We create luxurious, modern, and functional living spaces in the heart of Nashville. Precision. Passion. Perfection.</p>
+  </section>
+
+  <section id="services" style="background-image: url('https://images.unsplash.com/photo-1600585153933-47dfcb0b3f91?auto=format&fit=crop&w=1920&q=80');">
+    <h2>Our Services</h2>
+    <p>Kitchen, bathroom, and whole-home remodeling tailored to your vision — done the TrueCraft way.</p>
+  </section>
+
+  <section id="design" style="background-image: url('https://images.unsplash.com/photo-1615873968403-89c192f2f706?auto=format&fit=crop&w=1920&q=80');">
+    <h2>Design in 3D</h2>
+    <p>Launch our interactive 3D room planner to create your perfect kitchen, bathroom, living room, or bedroom.</p>
+    <div class="button-spaced">
+      <a href="https://planner5d.com/" target="_blank" class="button">Launch 3D Designer</a>
+    </div>
+    <h3>Have a design? Upload it!</h3>
+    <form id="uploadForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="file" id="file" name="file" multiple required>
+      <button type="submit">Send Design</button>
+    </form>
+    <p id="uploadStatus" style="margin-top: 10px; color: lightgreen;"></p>
+  </section>
+
+  <section id="instagram" style="background-image: url('https://images.unsplash.com/photo-1620225035513-5a8459c3b42d?auto=format&fit=crop&w=1920&q=80');">
+    <h2>Our Work on Instagram</h2>
+    <div class="instagram-embed-wrapper">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CqQtFwPpXEj/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cpra1dTs2MM/" data-instgrm-version="14"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CprXwLbMbmF/" data-instgrm-version="14"></blockquote>
+    </div>
+  </section>
+
+  <section id="contact" style="background-image: url('https://images.unsplash.com/photo-1615874959474-d609969a410b?auto=format&fit=crop&w=1920&q=80');">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top: 20px;">TrueCraft Nashville<br>123 Artisan Way, Nashville, TN<br>Mon–Fri 9AM–5PM</p>
+  </section>
+
+  <footer>
+    &copy; 2025 TrueCraft Nashville. All rights reserved.
+  </footer>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    document.getElementById('uploadForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const fileInput = document.getElementById('file');
+      const status = document.getElementById('uploadStatus');
+
+      if (!fileInput.files.length) {
+        status.textContent = 'Please select at least one file.';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      for (const file of fileInput.files) {
+        formData.append('file', file);
+      }
+
+      try {
+        const response = await fetch('https://truecraft-server.onrender.com/upload', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          status.textContent = '✅ Upload successful! We’ve sent you a confirmation email.';
+        } else {
+          status.textContent = '❌ Upload failed. Please try again later.';
+        }
+      } catch (error) {
+        console.error('Upload error:', error);
+        status.textContent = '❌ Error uploading file.';
+      }
+    });
+  </script>
+</body>
+</html>
