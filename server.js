@@ -20,6 +20,10 @@ app.use(cors({
   ]
 }));
 
+// Health check or friendly root route
+app.get('/', (req, res) => {
+  res.send('✅ TrueCraft backend is running!');
+});
 
 // Serve static files (optional React build support)
 const DIST_DIR = path.join(__dirname, '../frontend/build');
