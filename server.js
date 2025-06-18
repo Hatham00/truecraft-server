@@ -14,10 +14,12 @@ const port = process.env.PORT || 3000;
 // Enable CORS
 app.use(cors({
   origin: [
-    'https://www.test123hatham.com',
-    'https://truecraft-frontend.onrender.com'
+    'https://test123hatham.com',
+    'https://www.test123hatham.com', // optional if you plan to support www
+    'https://truecraft-frontend.onrender.com' // optional for backup Render domain
   ]
 }));
+
 
 // Serve static files (optional React build support)
 const DIST_DIR = path.join(__dirname, '../frontend/build');
