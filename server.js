@@ -122,7 +122,7 @@ app.post('/upload', upload.array('file', 10), async (req, res) => {
 
     await resend.emails.send({
       from: 'noreply@test123hatham.com',
-      to: email,
+      to: req.body.email,
       subject: '✅ Your Design Upload Was Received',
       html: `
         <div style="font-family: Arial; color: #333; max-width:600px;margin:auto;">
