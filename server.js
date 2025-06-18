@@ -28,9 +28,6 @@ app.get('/', (req, res) => {
 // Serve static files (optional React build support)
 const DIST_DIR = path.join(__dirname, '../frontend/build');
 app.use(express.static(DIST_DIR));
-app.get('/*splat', (req, res) => {
-  res.sendFile(path.join(DIST_DIR, 'index.html'));
-});
 
 // Memory storage for uploads
 const upload = multer({ storage: multer.memoryStorage() });
